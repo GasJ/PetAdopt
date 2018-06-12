@@ -1,0 +1,121 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Login";
+}
+
+<style>
+    /* log in and sign up page*/
+    .log-page {
+        background-image: url("../../cat.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        text-align: center;
+        min-height: 500px;
+        color: white;
+    }
+
+    .row {
+        padding: 7%;
+    }
+
+    /*the logging in table*/
+    .log-page .log-toggle {
+        background-image: url("../../log-bg.png");
+        background-size: cover;
+    }
+
+    .log-page .panel {
+        background-image: url("../../cat.png");
+        background-color: #eb502f;
+        background-size: cover;
+        position: center;
+        border-radius: 7px;
+        border-width: 0.5px;
+        border-color: black;
+    }
+   
+
+    #label {
+        color: red;
+    }
+
+
+    /*modal*/
+    .log-page .modal{
+        position:center;
+        color:black;
+    }
+</style>
+
+
+<div class="log-page ">
+    <div class="row">
+         <div class="col-xs-3"></div>
+         <div class="col-xs-6">
+             <div class="log-toggle">
+                 <div class="panel">
+
+                     @*<p>Don't have an account?</p>*@
+                     <div class="panel-body">
+                         <div class="form-group">
+                             @*<label class="text-left">EMAIL ADDRESS</label>*@
+                             <p class="text-left">EMAIL ADDRESS</p>
+                             <input type="email" class="form-control" id="usr">
+                         </div>
+                         <div class="form-group text-left">
+                             @*<label for="pwd" class="text-left">PASSWORD</label>*@
+                             <p>PASSWORD</p>
+                             <input type="password" class="form-control" id="pwd">
+                             <a data-toggle="modal" data-target="#signedModal">Forgot password?</a>
+                         </div>
+                         <button type="submit" class="btn btn-warning" id="log">Log in Now</button>
+                         <p style="margin-top:3%">Don't have an account?</p>
+                         <button type="button" class="btn btn-link" data-toggle="modal" data-target="#signedModal">
+                                 Signed Up Now!
+                         </button>
+                     </div>
+                 </div> 
+             </div>
+         </div>
+        <div class="col-xs-3"></div>
+    </div>
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="signedModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">JOIN US TO ADOPT ADORABLE CUTIES NOW</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        @*<label class="text-left">EMAIL ADDRESS</label>*@
+                        <p class="text-left">EMAIL ADDRESS</p>
+                        <input type="email" class="form-control" id="usr">
+                    </div>
+                    <div class="form-group">
+                        @*<label for="pwd" class="text-left">PASSWORD</label>*@
+                        <p class="text-left">PASSWORD</p>
+                        <input type="password" class="form-control" id="pwd">
+                    </div>
+                    <button type="submit" class="btn btn-info" id="log">SIGN UP</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>

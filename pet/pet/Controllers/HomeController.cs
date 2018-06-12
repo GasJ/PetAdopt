@@ -17,15 +17,20 @@ namespace pet.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "We are tring to make more animals' life better.";
 
             return View();
         }
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "Here are some ways to contact and help us.";
 
+            return View();
+        }
+
+		public IActionResult Login()
+		{
             return View();
         }
 
